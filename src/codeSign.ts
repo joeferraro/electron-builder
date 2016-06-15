@@ -134,6 +134,7 @@ export function sign(path: string, options: CodeSigningInfo): BluebirdPromise<an
   if (options.keychainName != null) {
     args.push("--keychain", options.keychainName)
   }
+  console.log('SIGNING --->', args);
   return exec("codesign", args)
 }
 
